@@ -1,0 +1,167 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #f2e8c9;
+    color: #333;
+    text-align: center;
+}
+
+h1, h2 {
+    font-weight: 700;
+    color: #ff0000; /* Changed to Red */
+    text-transform: uppercase;
+    text-shadow: 2px 2px #ffcc00;
+}
+
+p {
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    border: 5px solid #ff0000;
+}
+
+/* Retro Pixel Background */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('https://c4.wallpaperflare.com/wallpaper/500/198/463/pixel-art-digital-art-pixelated-pixels-wallpaper-preview.jpg') repeat;
+    opacity: 0.1;
+    z-index: -1;
+    animation: pixel-animation 10s infinite linear;
+}
+
+@keyframes pixel-animation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100px 100px;
+    }
+}
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+}
+
+#about, #projects, #contact {
+    background-color: #fff;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    border: 2px solid #ff0000; /* Red border */
+    padding: 20px;
+    box-shadow: 5px 5px 0 #ff6ec7;
+}
+
+/* Projects Section */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-card {
+    background-color: #f2e8c9;
+    padding: 20px;
+    width: 40%;
+    border: 2px solid #00f0ff;
+    box-shadow: 3px 3px 0 #ff6ec7;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 0 #ffcc00;
+}
+
+/* Retro 3D Shake Effect for Project Cards */
+.project-card.hover-effect {
+    animation: shake 0.3s linear;
+    transform: scale(1.1);
+    box-shadow: 5px 5px 0 #ffcc00;
+}
+
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Buttons */
+button {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #00f0ff;
+    color: #333;
+    padding: 10px 20px;
+    border: 3px solid #ffcc00;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 0 #ff6ec7;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+button:hover {
+    background-color: #ffcc00;
+    border-color: #00f0ff;
+}
+
+/* Retro Button Glow Effect */
+button.button-hover-effect {
+    box-shadow: 0px 0px 15px #ff6ec7;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #f2e8c9;
+    text-shadow: 1px 1px #ffcc00;
+}
+
+/* Input Fields */
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #00f0ff;
+    background-color: #fff;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #ff6ec7;
+}
+
+/* Social Icons */
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icon {
+    color: #f2e8c9;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ff0000; /* Red hover for icons */
+}
